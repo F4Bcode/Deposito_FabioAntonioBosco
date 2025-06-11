@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(){
+        
+//Definizione delle variabili
+char name[20];
+int number1;
+int number2;
+int somma(numero1+numero2);
+    
+    //1) Richiesta inserimento nome e relativa lettura.
+    printf("Inserisci il tuo nome: ");
+    if(scanf("%19s",name)!=1){
+        printf("INPUT NON VALIDO PER IL NOME./n");
+        return 1;
+        }
+        
+    //2) Richiesta inserimento del primo numero.
+    printf("Inserisci un numero intero: ");
+    if(scanf())
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    return 0
+}
