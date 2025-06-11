@@ -31,7 +31,6 @@ int somma;
 //4 Calcolo della somma dopo aver ottenuto i numeri
     somma = number1 + number2;
     
-    
 //5) Stampa il nome utente e la somma dei due numeri
     printf("Nome Utente: %s\n", name);
     printf("Somma dei due numeri Inseriti: %d\n", somma);
