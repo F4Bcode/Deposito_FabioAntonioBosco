@@ -3,7 +3,7 @@
 int main(){
 //Definizione delle variabili
 char citta[20];
-float number1,number2,number3
+float number1,number2,number3;
 float somma;
 float media;
 
