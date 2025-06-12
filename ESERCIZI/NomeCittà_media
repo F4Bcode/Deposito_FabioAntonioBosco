@@ -22,14 +22,14 @@ float media;
         }
         
 //3) Richiesta inserimento del secondo numero.
-    printf("Inserisci un numero intero: ");
+    printf("Inserisci un numero: ");
     if(scanf("%f",&number2)!=1){
         printf("INPUT NUMERO NON VALIDO.\n");
         return 1;
         }
         
 //4) Richiesta inserimento del terzo numero.
-    printf("Inserisci un numero intero: ");
+    printf("Inserisci un numero: ");
     if(scanf("%f",&number3)!=1){
         printf("INPUT NUMERO NON VALIDO.\n");
         return 1;
@@ -37,7 +37,7 @@ float media;
         
 //5 Calcolo della media dopo aver ottenuto i numeri
     somma = number1 + number2 + number3;
-    media = somma/3;
+    media = somma / 3;
     
 //6) Stampa il nome della città e la media dei valori
     printf("Nome della tua città: %s\n", citta);
