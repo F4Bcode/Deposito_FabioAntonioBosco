@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Inserisci un numero intero: \n");
+    scanf("%d", &numero);
+
+\\Avviso numero positivo.
+
+    if (numero>0){
+        printf("Il numero è positivo.\n");
+
+\\Avviso Wow.
+        if (numero> 100){
+            printf("wow\n");
+        }
+
+\\Avviso numero negativo.
+
+    else if (numero<0){
+        printf("Il numero è negativo.\n");
+    } 
+
+\\ Avviso uguale a zero
+
+    }else{
+        printf("Il numero è 0.\n");
+    }
+    return 0;
+}
