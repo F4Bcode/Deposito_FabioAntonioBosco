@@ -3,17 +3,50 @@
 #include <ctype.h>
 
 char figura[20];
-float base,altezza,lato,raggio;
-float prodotto;
+float base,altezza,lato,diametro,raggio;
+float area;
 
 int main(){
     printf("===CALCOLO AREA FIGURE GEOMETRICHE===\n");
-    printf("Figure disponibili: Quadrato, Rettangolo, triangolo, Cerchio.\n");
+    printf("Figure disponibili: Quadrato, Rettangolo, Triangolo, Cerchio.\n");
     
     printf("Inserisci il nome della figura geometrica:" );
-    if(scanf("%19s", figura)!=1){
-        printf("INPUT NON VALIDO! INSERIRE SOLO LETTERE./n");
-    return 1;
+    scanf("%19s", figura);
+    if (strcmp(figura, "quadrato") == 0) {
+        printf("===CALCOLO AREA QUADRATO===\n");
+        printf("Inserisci misura lato quadrato in metri: \n");
+            scanf("%2f",&lato);
+            area = lato*lato;
+            printf("L'area del quadrato è %.2f\n",area);
+    }
+    
+    else if (strcmp(figura, "rettangolo") == 0) {
+        printf("===CALCOLO AREA RETTANGOLO===\n");
+        printf("Inserisci misura base rettangolo in metri: ");
+            scanf("%2f",&base);
+        printf("Inserisci misura altezza rettangolo in metri: ");
+            scanf("%2f",&altezza);
+            area = base*altezza;
+            printf("L'area del rettangolo è %.2f\n",area);
+    }
+    
+    else if (strcmp(figura, "triangolo") == 0) {
+        printf("===CALCOLO AREA TRIANGOLO===\n");
+        printf("Inserisci misura base triangolo in metri: ");
+            scanf("%2f",&base);
+        printf("Inserisci misura altezza triangolo in metri: ");
+            scanf("%2f",&altezza);
+            area = (base*altezza)/2;
+            printf("L'area del triangolo è %.2f\n",area);
+    }
+    
+    else if (strcmp(figura, "cerchio") == 0) {
+        printf("===CALCOLO AREA CERCHIO===\n");
+        printf("Inserisci misura del diametro in metri: ");
+            scanf("%2f",&diametro);
+            raggio = diametro/2;
+            area = (raggio*raggio)*3,14;
+            printf("L'area del cerchio è %.2f\n",area);
     }
     
     return 0;
