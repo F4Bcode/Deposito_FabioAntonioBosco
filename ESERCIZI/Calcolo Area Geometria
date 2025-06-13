@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 char figura[20];
 float base,altezza,lato,raggio;
 float prodotto;
 
 int main(){
-    printf("===CALCOLO AREA FIGURE GEOMETRICHE===/n");
-    printf("Figure disponibili: Quadrato, Rettangolo, triangolo, Cerchio");
+    printf("===CALCOLO AREA FIGURE GEOMETRICHE===\n");
+    printf("Figure disponibili: Quadrato, Rettangolo, triangolo, Cerchio.\n");
     
     printf("Inserisci il nome della figura geometrica:" );
-    if(scanf("%19f",&figura)!=1){
-        printf("IMPUT NON VALIDO! Scegli una figura tra le disponibili./n");
+    if(scanf("%19s", figura)!=1){
+        printf("INPUT NON VALIDO! INSERIRE SOLO LETTERE./n");
+    return 1;
     }
     
-    int 
-
     return 0;
 }
