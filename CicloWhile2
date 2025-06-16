@@ -1,0 +1,18 @@
+ #include <stdio.h>
+
+int main() {
+    int numero, trovato = 0; // 0 = falso, 1 = vero
+
+    while (!trovato) {
+        printf("Indovina il numero segreto (tra 1 e 5): ");
+        scanf("%d", &numero);
+
+        if (numero == 3) {
+            printf("Hai indovinato!\n");
+            trovato = 1; // esce dal ciclo
+        } else {
+            printf("Ritenta.\n");
+        }
+    }
+    return 0;
+}
