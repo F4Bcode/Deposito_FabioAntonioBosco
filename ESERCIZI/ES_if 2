@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int num;
+
+int main()
+{
+    printf("Inserisci un numero intero: ");
+    scanf("%d",&num);
+    
+if(num>0 && num % 2){
+    printf("=== Il numero è pari è positivo! ===\n");
+        if(num>50){
+            printf("Il numero è molto grande!");
+        }
+        
+else if(num<0 || num>=100){
+    printf("Il numero ho è negativo o è maggiore 100!\n");
+        if(num % 5 == 0){
+            printf("Il numero è multiplo di 5");
+        }
+}else{
+    printf("Il numero non soddisfa nessuna delle condizioni precedenti!");
+        if(num != 0){
+            printf("Numero diverso di 0");
+        }
+}
+    return 0;
+}
