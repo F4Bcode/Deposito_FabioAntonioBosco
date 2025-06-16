@@ -47,6 +47,8 @@ int main(){
             raggio = diametro/2;
             area = (raggio*raggio)*3,14;
             printf("L'area del cerchio è %.2f\n",area);
+    }else{
+        printf("===FIGURA GEOMETRICA NON SUPPORTATA===");
     }
     
     return 0;
