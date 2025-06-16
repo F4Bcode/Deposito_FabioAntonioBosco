@@ -8,13 +8,13 @@ float area;
 
 int main(){
     printf("===CALCOLO AREA FIGURE GEOMETRICHE===\n");
-    printf("Figure disponibili: Quadrato, Rettangolo, Triangolo, Cerchio.\n");
+    printf("Figure disponibili: quadrato, rettangolo, triangolo, cerchio.\n");
     
     printf("Inserisci il nome della figura geometrica:" );
     scanf("%19s", figura);
     if (strcmp(figura, "quadrato") == 0) {
         printf("===CALCOLO AREA QUADRATO===\n");
-        printf("Inserisci misura lato quadrato in metri: \n");
+        printf("Inserisci misura lato quadrato in metri: ");
             scanf("%2f",&lato);
             area = lato*lato;
             printf("L'area del quadrato è %.2f\n",area);
@@ -36,7 +36,7 @@ int main(){
             scanf("%2f",&base);
         printf("Inserisci misura altezza triangolo in metri: ");
             scanf("%2f",&altezza);
-            area = (base*altezza)/2;
+            area = (base*altezza)/2.0;
             printf("L'area del triangolo è %.2f\n",area);
     }
     
@@ -44,8 +44,8 @@ int main(){
         printf("===CALCOLO AREA CERCHIO===\n");
         printf("Inserisci misura del diametro in metri: ");
             scanf("%2f",&diametro);
-            raggio = diametro/2;
-            area = (raggio*raggio)*3,14;
+            raggio = diametro/2.0;
+            area = (raggio*raggio)*3.14;
             printf("L'area del cerchio è %.2f\n",area);
     }else{
         printf("===FIGURA GEOMETRICA NON SUPPORTATA===");
