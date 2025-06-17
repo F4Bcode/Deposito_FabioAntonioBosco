@@ -12,8 +12,6 @@ printf("Inserisci un numero (0 per terminare): ");
         if (numero > 0) {
             somma += numero;
         }
-        
-    }
     
     printf("\n La Somma totale dei numeri positivi inseriti è: %d\n",somma);
     return 0;
