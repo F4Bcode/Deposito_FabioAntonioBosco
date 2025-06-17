@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h> // Necessario per usare il tipo bool
+
+int main() {
+    int numero;
+    bool continua = true; // Variabile booleana di controllo
+
+    while (continua) {
+        printf("Inserisci un numero (0 per terminare): ");
+        scanf("%d", &numero);
+
+        if (numero == 0) {
+            continua = false; // Interrompe il ciclo
+        } else {
+            printf("Hai inserito il numero %d\n", numero);
+        }
+    }
+    printf("Ciclo terminato!\n");
+    return 0;
+}
