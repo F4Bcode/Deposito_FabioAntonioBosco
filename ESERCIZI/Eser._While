@@ -14,5 +14,8 @@ printf("Inserisci un numero (0 per terminare): ");
         }
     
     printf("\n La Somma totale dei numeri positivi inseriti è: %d\n",somma);
+    
+    }
+    
     return 0;
 }
