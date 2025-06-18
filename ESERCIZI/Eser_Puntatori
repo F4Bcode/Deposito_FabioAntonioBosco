@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+int n1, n2, temp;
+int *p1, *p2;
+
+//Chiedere all'utente di inserire due numeri interi.
+
+    printf("Inserisci il primo numero: ");
+        scanf("%d", &n1);
+    printf("Inserisci il secondo numero: ");
+        scanf("%d", &n2);
+
+//Usa due puntatori 
+
+    p1=&n1, p2=&n2;
+
+//Stampa a schermo i numeri prima dello scambio.
+
+    printf("I Valori inseriti prima dello scambio sono %d e %d.\n", n1, n2);
+
+//Scambiare i valori dei numeri.
+
+    temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+
+//Stampa a schermo i numeri dopo lo scambio.
+
+    printf("I Valori inseriti dopo dello scambio sono %d e %d.\n", n1, n2);
+
+//Calcola la somma dei due numeri usando i puntatori e stampa il risultato.
+
+    int somma = *p1+*p2;
+    printf("La somma dei due numeri è %d\n", somma);
+
+//Determina quale dei due numeri (dopo lo scambio) è il maggiore
+
+    if (*p1 > *p2) {
+        printf("Il maggiore è: %d\n", *p1);
+        } else if (*p1 < *p2) {
+        printf("Il maggiore è: %d\n", *p2);
+        } else {
+        printf("I numeri sono uguali.\n");
+        }
+        
+    return 0;
+    
+}
