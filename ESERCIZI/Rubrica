@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <string.h>
+
+// Definizione della struct Contatto
+struct Contatto {
+    char nome[31];      // 30 caratteri + terminatore
+    char telefono[16];  // 15 caratteri + terminatore
+};
+
+int main() {
+    struct Contatto rubrica[20];  // Array di struct per max 20 contatti
+    int numContatti;
+    char nomeCercato[31];
+    int trovato = 0;
+    
+    // Chiede all'utente quante persone vuole inserire
+    printf("Quante persone vuoi inserire nella rubrica? (max 20): ");
+    scanf("%d", &numContatti);
+    
+    // Verifica che il numero sia valido
+    if (numContatti <= 0 || numContatti > 20) {
+        printf("Errore: inserire un numero tra 1 e 20.\n");
+        return 1;
+    }
+    
+    // Pulisce il buffer dopo scanf
+    getchar();
+    
+    // Per ogni persona, chiede nome e telefono
+    printf("\nInserisci i dati dei contatti:\n");
+    for (int i = 0; i < numContatti; i++) {
+        printf("\nContatto %d:\n", i + 1);
+        
+        printf("Nome (max 30 caratteri): ");
+        fgets(rubrica[i].nome, sizeof(rubrica[i].nome), stdin);
+        // Rimuove il carattere newline se presente
+        rubrica[i].nome[strcspn(rubrica[i].nome, "\n")] = 0;
+        
+        printf("Telefono (max 15 caratteri): ");
+        fgets(rubrica[i].telefono, sizeof(rubrica[i].telefono), stdin);
+        // Rimuove il carattere newline se presente
+        rubrica[i].telefono[strcspn(rubrica[i].telefono, "\n")] = 0;
+    }
+    
+    // Chiede il nome da cercare
+    printf("\nInserisci il nome da cercare nella rubrica: ");
+    fgets(nomeCercato, sizeof(nomeCercato), stdin);
+    // Rimuove il carattere newline se presente
+    nomeCercato[strcspn(nomeCercato, "\n")] = 0;
+    
+    // Cerca il nome nella rubrica
+    for (int i = 0; i < numContatti; i++) {
+        if (strcmp(rubrica[i].nome, nomeCercato) == 0) {
+            printf("\nContatto trovato!\n");
+            printf("Nome: %s\n", rubrica[i].nome);
+            printf("Telefono: %s\n", rubrica[i].telefono);
+            trovato = 1;
+            break;
+        }
+    }
+    
+    // Se il contatto non è stato trovato
+    if (!trovato) {
+        printf("\nContatto non trovato.\n");
+    }
+    
+    return 0;
+}
